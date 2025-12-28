@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const posts = [
+    {
+        title: "My Journey to Winning WWDC Swift Student Challenge",
+        date: "2025-02-15",
+        slug: "wwdc-journey"
+    },
+    {
+        title: "Building a Lambda Calculus Interpreter in Swift",
+        date: "2025-01-20",
+        slug: "building-interpreters"
+    },
+    {
+        title: "Understanding Recursive Descent Parsers",
+        date: "2024-12-10",
+        slug: "recursive-descent-parsing"
+    },
+    {
+        title: "SwiftUI Performance Tips for Large Lists",
+        date: "2024-11-05",
+        slug: "swiftui-performance"
+    },
+    {
+        title: "Building a Distributed Sync Engine with Operational Transformation",
+        date: "2024-10-12",
+        slug: "distributed-systems"
+    },
+    {
+        title: "My First Open Source Contributions: Lessons Learned",
+        date: "2024-09-18",
+        slug: "open-source-contributions"
+    },
+    {
+        title: "Compilers 101: From Source Code to Assembly",
+        date: "2024-08-25",
+        slug: "compilers-101"
+    },
+    {
+        title: "MVVM Architecture in iOS: A Practical Guide",
+        date: "2024-07-14",
+        slug: "mvvm-architecture"
+    }
+];
+---
+
+<Layout title="Blog | Aditya Medhane">
+    <section class="blog-header">
+        <h1>blog</h1>
+    </section>
+
+    <section class="blog-posts">
+        {posts.map(post => (
+            <a href={`/blog/${post.slug}`} class="blog-post-link">
+                <article class="blog-post">
+                    <h2>{post.title}</h2>
+                    <time datetime={post.date}>{post.date}</time>
+                </article>
+            </a>
+        ))}
+    </section>
+</Layout>
+
+<style>
+/* Blog Page Styles */
+.blog-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+    letter-spacing: -0.02em;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.blog-post-link {
+    display: block;
+    transition: var(--transition);
+}
+
+.blog-post {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.blog-post-link:hover .blog-post {
+    padding-left: 16px;
+    border-color: var(--accent);
+}
+
+.blog-post h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.blog-post time {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+</style>

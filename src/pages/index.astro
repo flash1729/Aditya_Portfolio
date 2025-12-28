@@ -1,0 +1,294 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Now from "../components/Now.astro";
+
+// Content for sections
+const experiences = [
+    {
+        company: "AppCake",
+        role: "ios engineering intern | remote",
+        duration: "dec 2024 - june 2025",
+        desc: "built distributed sync engine with dropbox api, established ci/cd pipeline with 85% test coverage.",
+        link: "https://appcake.app",
+        logo: "/logos/appcake_logo.png",
+    },
+    {
+        company: "OneBusAway iOS",
+        role: "open source contributor | remote",
+        duration: "jan 2024 - present",
+        desc: "engineered persistent bookmark storage, conducted code reviews, improved onboarding efficiency by 40%.",
+        link: "https://github.com/OneBusAway/onebusaway-ios",
+        logo: "/logos/oba_logo.png",
+    },
+];
+
+const projects = [
+    {
+        title: "Lambda Calculus Interpreter",
+        role: "swift, swiftui, c++",
+        duration: "wwdc '25 winner",
+        desc: "high-performance interpreter with recursive descent parser, thread-safe evaluation engine, and context-aware error handling.",
+        logo: "λ",
+        link: "#",
+        badge: "🏆 wwdc winner",
+    },
+    {
+        title: "CodeSathi",
+        role: "react, node.js, socket.io, mongodb",
+        duration: "real-time collaborative code editor",
+        desc: "low-latency (<100ms) collaborative environment with google gemini api integration and mongodb-backed file system.",
+        logo: "⚡",
+        link: "#",
+    },
+];
+
+const skills = [
+    "swift",
+    "c++",
+    "python",
+    "typescript",
+    "swiftui",
+    "react",
+    "node.js",
+    "docker",
+    "aws",
+    "mongodb",
+    "xcode",
+    "git",
+    "system design",
+    "compilers",
+    "tdd",
+];
+---
+
+<Layout title="Aditya Medhane">
+    <Hero />
+
+    <Now />
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>about</h2>
+        <p class="about-text">
+            tldr; wwdc '25 swift student challenge winner<br /><br />
+            i build high-performance interpreters, ios apps, and distributed systems.<br
+            />
+            passionate about solving complex challenges through object-oriented design
+            and algorithmic optimization.<br /><br />
+            currently pursuing b.tech in computer science at <a
+                href="https://www.iiitm.ac.in/"
+                target="_blank"
+                rel="noopener">iiitm gwalior</a
+            >.
+        </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <h2>cool places i worked at</h2>
+        {
+            experiences.map((exp) => (
+                <a
+                    href={exp.link}
+                    target="_blank"
+                    rel="noopener"
+                    class="work-card"
+                >
+                    <div class="work-logo logo-bare">
+                        {exp.logo.includes(".") ? (
+                            <img
+                                src={exp.logo}
+                                alt={exp.company}
+                                class="company-logo-img"
+                            />
+                        ) : (
+                            exp.logo
+                        )}
+                    </div>
+                    <div class="work-info">
+                        <h3>{exp.company}</h3>
+                        <p class="work-duration">{exp.duration}</p>
+                        <p class="work-role">{exp.role}</p>
+                        <p class="work-desc">{exp.desc}</p>
+                    </div>
+                </a>
+            ))
+        }
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>things i've built</h2>
+        {
+            projects.map((proj) => (
+                <a href={proj.link} class="work-card project-card">
+                    <div class="work-logo">
+                        {proj.logo.includes(".") ? (
+                            <img
+                                src={proj.logo}
+                                alt={proj.title}
+                                class="company-logo-img"
+                            />
+                        ) : (
+                            proj.logo
+                        )}
+                    </div>
+                    <div class="work-info">
+                        <h3>{proj.title}</h3>
+                        <p class="work-duration">{proj.duration}</p>
+                        <p class="work-role">{proj.role}</p>
+                        <p class="work-desc">{proj.desc}</p>
+                    </div>
+                    {proj.badge && (
+                        <span class="project-badge">{proj.badge}</span>
+                    )}
+                </a>
+            ))
+        }
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <h2>education</h2>
+        <a
+            href="https://www.iiitm.ac.in/"
+            target="_blank"
+            rel="noopener"
+            class="work-card"
+        >
+            <div class="work-logo">
+                <img
+                    src="/logos/iiitm_logo.jpg"
+                    alt="IIITM Gwalior"
+                    class="company-logo-img"
+                    onerror="this.style.display='none'; this.parentElement.innerText='🎓'"
+                />
+            </div>
+            <div class="work-info">
+                <h3>IIITM Gwalior</h3>
+                <p class="work-duration">2023 - 2027</p>
+                <p class="work-role">b.tech in computer science engineering</p>
+                <p class="work-desc">
+                    cgpa: 8.5/10 • data structures, algorithms, os, compilers,
+                    distributed systems
+                </p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership">
+        <h2>leadership</h2>
+        <a href="#" class="work-card">
+            <div class="work-logo">
+                <img
+                    src="/logos/gdg_logo.png"
+                    alt="GDG"
+                    class="company-logo-img"
+                    onerror="this.style.display='none'; this.parentElement.innerText='G'"
+                />
+            </div>
+            <div class="work-info">
+                <h3>Google Developer Group, IIITM</h3>
+                <p class="work-duration">sep 2025 - present</p>
+                <p class="work-role">ios and open source lead</p>
+                <p class="work-desc">
+                    leading ios workshops, mentoring 50+ students, fostering
+                    open-source culture.
+                </p>
+            </div>
+        </a>
+        <a href="#" class="work-card">
+            <div class="work-logo">
+                <img
+                    src="/logos/ecell_logo.jpeg"
+                    alt="E-Cell"
+                    class="company-logo-img"
+                    onerror="this.style.display='none'; this.parentElement.innerText='E'"
+                />
+            </div>
+            <div class="work-info">
+                <h3>E-Cell IIITM</h3>
+                <p class="work-duration">dec 2024 - present</p>
+                <p class="work-role">operations executive</p>
+                <p class="work-desc">
+                    coordinating logistics and technical operations for
+                    300-person hackathons.
+                </p>
+            </div>
+        </a>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="awards">
+        <h2>honors & awards</h2>
+        <div class="award-card">
+            <div
+                class="work-logo logo-bare"
+                style="width: 60px; height: 60px; margin-right: 16px;"
+            >
+                <img
+                    src="/logos/ssc_logo.png"
+                    alt="SSC Winner"
+                    class="company-logo-img"
+                    onerror="this.style.display='none'; this.parentElement.innerText='🍎'"
+                />
+            </div>
+            <div class="award-info">
+                <h3>WWDC Swift Student Challenge Winner</h3>
+                <p>
+                    selected as one of 350 winners globally (top &lt;5% of
+                    applicants)
+                </p>
+                <span class="award-year">2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>skills</h2>
+        <div class="skills-grid">
+            {skills.map((skill) => <span class="skill-tag">{skill}</span>)}
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+        <p>
+            say hello on <a
+                href="https://x.com/Adi_flash1729"
+                target="_blank"
+                rel="noopener">𝕏</a
+            >
+        </p>
+    </section>
+</Layout>
+
+<script>
+    // Scroll Animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                (entry.target as HTMLElement).style.opacity = "1";
+                (entry.target as HTMLElement).style.transform = "translateY(0)";
+            }
+        });
+    }, observerOptions);
+
+    document
+        .querySelectorAll("section, .work-card, .award-card")
+        .forEach((el) => {
+            const element = el as HTMLElement;
+            element.style.opacity = "0";
+            element.style.transform = "translateY(20px)";
+            element.style.transition = `opacity 0.6s ease, transform 0.6s ease`;
+            observer.observe(element);
+        });
+</script>

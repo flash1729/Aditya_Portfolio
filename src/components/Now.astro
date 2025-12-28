@@ -1,0 +1,80 @@
+---
+---
+
+<div class="now-widget">
+    <div class="now-label">
+        <span class="pulsing-dot"></span>
+        <span>now</span>
+    </div>
+    <p class="now-text">
+        building <span class="highlight">compilers</span> & <span class="highlight">interpreters</span>, 
+        reading <span class="highlight">dune</span>, 
+        and practicing <span class="highlight">teentaal</span> on tabla.
+    </p>
+</div>
+
+<style>
+    .now-widget {
+        margin-bottom: 64px;
+        padding: 16px 20px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        transition: var(--transition);
+    }
+
+    .now-widget:hover {
+        border-color: var(--accent);
+        background: var(--card-hover);
+    }
+
+    .now-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    .pulsing-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #22c55e;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .pulsing-dot::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #22c55e;
+        border-radius: 50%;
+        animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+        0% { transform: scale(1); opacity: 0.8; }
+        70% { transform: scale(2.5); opacity: 0; }
+        100% { transform: scale(1); opacity: 0; }
+    }
+
+    .now-text {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+    }
+
+    .highlight {
+        color: var(--text-primary);
+        font-weight: 500;
+        border-bottom: 1px dashed var(--border-color);
+    }
+</style>

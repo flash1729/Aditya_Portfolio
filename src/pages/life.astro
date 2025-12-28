@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const books = [
+    { title: "Dune", author: "Frank Herbert", status: "reading" },
+    { title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", status: "reading" },
+    { title: "Steve Jobs", author: "Walter Isaacson", status: "finished" }
+];
+
+const movies = [
+    { title: "Interstellar", year: "2014" },
+    { title: "The Social Network", year: "2010" },
+    { title: "Whiplash", year: "2014" }
+];
+---
+
+<Layout title="Life | Aditya Medhane">
+    <section class="page-header">
+        <h1>life & interests</h1>
+        <p class="subtitle">beyond the terminal.</p>
+    </section>
+
+    <!-- Tabla / Music Section -->
+    <section class="interest-section">
+        <div class="section-title">
+            <span class="icon">🥁</span>
+            <h2>rhythms</h2>
+        </div>
+        <div class="tabla-card">
+            <div class="tabla-info">
+                <h3>Tabla Visharad</h3>
+                <p>Developing classical rhythm for over 10 years. Currently mastering the nuances of the <b>Teentaal</b> (16 beats).</p>
+            </div>
+            <div class="waveform">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Football -->
+    <section class="interest-section">
+        <div class="section-title">
+            <span class="icon">⚽</span>
+            <h2>on the pitch</h2>
+        </div>
+        <div class="plain-card">
+            <h3>Left Winger</h3>
+            <p>Passionate football player and tactician. Always up for a match on the weekends.</p>
+        </div>
+    </section>
+
+    <!-- Books -->
+    <section class="interest-section">
+        <div class="section-title">
+            <span class="icon">📚</span>
+            <h2>library</h2>
+        </div>
+        <div class="grid-container">
+            {books.map(book => (
+                <div class="item-card">
+                    <div class="item-status">{book.status}</div>
+                    <h3>{book.title}</h3>
+                    <p>{book.author}</p>
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <!-- Movies -->
+    <section class="interest-section">
+        <div class="section-title">
+            <span class="icon">🎬</span>
+            <h2>watchlist</h2>
+        </div>
+        <div class="grid-container">
+            {movies.map(movie => (
+                <div class="item-card">
+                    <h3>{movie.title}</h3>
+                    <p>{movie.year}</p>
+                </div>
+            ))}
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    .page-header {
+        margin-bottom: 64px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+    }
+
+    .interest-section {
+        margin-bottom: 56px;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        letter-spacing: -0.01em;
+        margin: 0;
+    }
+
+    .section-title .icon {
+        font-size: 1.25rem;
+    }
+
+    /* Cards */
+    .tabla-card, .plain-card {
+        padding: 24px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        transition: var(--transition);
+    }
+
+    .tabla-card:hover, .plain-card:hover {
+        background: var(--card-hover);
+        border-color: var(--text-muted);
+    }
+
+    .tabla-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .tabla-info h3, .plain-card h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .tabla-info p, .plain-card p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Waveform Animation */
+    .waveform {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: 40px;
+    }
+
+    .bar {
+        width: 4px;
+        background: var(--text-muted);
+        border-radius: 2px;
+        animation: wave 1s ease-in-out infinite;
+    }
+
+    .bar:nth-child(2n) { animation-duration: 1.2s; }
+    .bar:nth-child(3n) { animation-duration: 0.8s; }
+    .bar:nth-child(4n) { animation-duration: 1.1s; }
+
+    @keyframes wave {
+        0%, 100% { height: 10px; opacity: 0.5; }
+        50% { height: 32px; opacity: 1; }
+    }
+
+    /* Grid Layouts */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
+    }
+
+    .item-card {
+        padding: 20px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 120px;
+        transition: var(--transition);
+    }
+
+    .item-card:hover {
+        background: var(--card-hover);
+        transform: translateY(-4px);
+        border-color: var(--text-muted);
+    }
+
+    .item-card h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        line-height: 1.4;
+    }
+
+    .item-card p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    .item-status {
+        align-self: flex-start;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 2px 8px;
+        border: 1px solid var(--border-color);
+        border-radius: 100px;
+        margin-bottom: 12px;
+        color: var(--text-secondary);
+    }
+</style>

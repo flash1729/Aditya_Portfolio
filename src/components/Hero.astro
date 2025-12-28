@@ -1,0 +1,96 @@
+---
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>hi, aditya here</h1>
+        <p class="age-counter">been coding for <span id="coding-counter">0.0000000000</span> years</p>
+    </div>
+    <div class="hero-image">
+        <div class="profile-orb"></div>
+    </div>
+</section>
+
+<style>
+/* Local Hero Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.age-counter {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.hero-image {
+    flex-shrink: 0;
+}
+
+.profile-orb {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    box-shadow:
+        0 0 60px rgba(102, 126, 234, 0.4),
+        0 0 120px rgba(118, 75, 162, 0.2);
+    animation: pulse 4s ease-in-out infinite, rotate 20s linear infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes rotate {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .profile-orb {
+        width: 100px;
+        height: 100px;
+    }
+}
+</style>
+
+<script>
+    const codingStartDate = new Date('2022-01-01T00:00:00');
+
+    function updateCodingCounter() {
+        const now = new Date();
+        const diff = now.getTime() - codingStartDate.getTime();
+        const years = diff / (1000 * 60 * 60 * 24 * 365.25);
+        
+        const counterElement = document.getElementById('coding-counter');
+        if (counterElement) {
+            counterElement.textContent = years.toFixed(10);
+        }
+    }
+
+    updateCodingCounter();
+    setInterval(updateCodingCounter, 50);
+</script>
