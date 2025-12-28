@@ -48,7 +48,7 @@ To run this project locally, follow these steps:
     ```
 
 4.  **Open your browser**
-    Visit `http://localhost:4321` to see the site live!
+    Visit `https://adityamedhane.vercel.app/` to see the site live!
 
 ## 📂 Project Structure
 
