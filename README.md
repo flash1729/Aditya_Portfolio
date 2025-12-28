@@ -1,43 +1,80 @@
-# Astro Starter Kit: Minimal
+# Aditya Medhane - Portfolio 🚀
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Welcome to the source code of my personal portfolio website. This project is a minimal, high-performance web application built with **Astro** and designed with a focus on aesthetics, speed, and modern web design principles (Glassmorphism, Micro-interactions).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<!-- ![Portfolio Preview](public/logos/ssc_logo.png) You might want to replace this with a screenshot of your site later -->*
 
-## 🚀 Project Structure
+## ✨ Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- **⚡ Blazing Fast**: Built with [Astro](https://astro.build/) for 0kb JavaScript by default (mostly).
+- **🎨 Modern Design**: Custom Vanilla CSS with glassmorphism effects, smooth transitions, and a dark/light mode architecture.
+- **📱 Responsive**: Fully responsive layout that looks great on mobile, tablet, and desktop.
+- **🧩 Component-Based**: Modular architecture using Astro components (`Hero`, `Dock`, `Now`).
+- **🌊 Fluid Animations**: Intersection Observers for scroll-reveal animations and hover effects.
+- **🛠 Accessibility**: Semantic HTML structure and accessible color contrast.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Astro 5.0](https://astro.build/)
+- **Styling**: Vanilla CSS (Variables, Flexbox, Grid, Glassmorphism)
+- **Deployment**: Vercel
+- **Package Manager**: npm
+
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/flash1729/Aditya_Portfolio.git
+    cd aditya_medhane
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open your browser**
+    Visit `http://localhost:4321` to see the site live!
+
+## 📂 Project Structure
 
 ```text
 /
-├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/    # UI Components (Hero, Dock, Now, etc.)
+│   ├── layouts/       # Main layout wrapper
+│   ├── pages/         # Route definitions (index.astro, life.astro)
+│   └── styles/        # Global CSS and variables
+├── public/            # Static assets (images, logos)
+└── astro.config.mjs   # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🚢 Deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This project is optimized for deployment on **Vercel**.
 
-Any static assets, like images, can be placed in the `public/` directory.
+1.  Push your changes to GitHub.
+2.  Import the project in Vercel.
+3.  The framework preset "Astro" should be detected automatically.
+4.  Click **Deploy**!
 
-## 🧞 Commands
+## 📄 License
 
-All commands are run from the root of the project, from a terminal:
+This project is valid for personal use and inspiration. Content (text, images, personal data) is © Aditya Medhane. Code is available under the MIT License.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+Built with ❤️ by [Aditya Medhane](https://x.com/Adi_flash1729)
