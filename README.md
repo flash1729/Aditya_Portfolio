@@ -1,39 +1,23 @@
-# Aditya Medhane — Portfolio
+**hey fella, looks like you got to the source of my website**
 
-My personal site. Built with [Astro](https://astro.build/), styled with plain CSS, deployed on Vercel.
+Cool that you're poking around back here. This is the code behind my little corner of the internet.
 
-I kept it small on purpose. Ships almost no JavaScript, loads fast, and the whole thing is a handful of components.
+Quick intro since you made it this far. I'm Aditya, a final year cs undergrad who fell hard for compilers. These days I work on LLVM and Clang, mostly around diagnostics, and I build iOS apps on the side. When I'm off the screen you'll catch me playing tabla, chasing a football, or rereading Harry Potter for the nth time.
 
-## Stack
-
-- **Astro 5** for the framework
-- **Vanilla CSS** with custom properties for theming and a dark/light toggle
-- **Vercel** for deploys
-
-## Running it locally
-
-You'll need Node 18+ and npm.
-
-```bash
-git clone https://github.com/flash1729/Aditya_Portfolio.git
-cd Aditya_Portfolio
-npm install
-npm run dev
-```
-
-Then open `http://localhost:4321`.
-
-## Structure
+## how it's laid out
 
 ```text
 src/
-├── components/   # Hero, Dock, Now
-├── layouts/      # Layout wrapper
-├── pages/        # index.astro, life.astro
-└── styles/       # global.css
-public/           # images and logos
+├── components/      # Hero, Dock, Now
+├── content/blog/    # blog posts, written in markdown
+├── layouts/         # the page shell
+├── pages/           # routes: home, blog, life
+└── styles/          # global css
+public/              # favicon, images, logos
 ```
 
-## License
+Poke around the components and pages if you're curious how a piece fits together.
 
-Code is MIT. The content (text, images, anything personal) is mine, so please don't lift that.
+Got a cool idea for a joint blog? Hit me up, I'd genuinely love that.
+
+Come say hi on [X](https://x.com/Adi_flash1729), [GitHub](https://github.com/flash1729), [LinkedIn](https://linkedin.com/in/aditya-medhane), or Discord (flash1729).
