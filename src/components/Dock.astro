@@ -19,21 +19,6 @@
         >
         <span class="active-dot"></span>
     </a>
-    <a href="/life" class="dock-item" id="nav-life" title="Life">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg
-        >
-        <span class="active-dot"></span>
-    </a>
     <a href="/blog" class="dock-item" id="nav-blog" title="Blog">
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -378,15 +363,12 @@
     // Logic for setting active state based on current URL
     const navHome = document.getElementById("nav-home");
     const navBlog = document.getElementById("nav-blog");
-    const navLife = document.getElementById("nav-life");
     const path = window.location.pathname;
 
     if (path === "/" || path === "") {
         navHome?.classList.add("active");
     } else if (path.includes("/blog")) {
         navBlog?.classList.add("active");
-    } else if (path.includes("/life")) {
-        navLife?.classList.add("active");
     }
 
     // Toggle Theme Logic

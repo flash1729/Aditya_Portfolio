@@ -1,80 +1,39 @@
-# Aditya Medhane - Portfolio 🚀
+# Aditya Medhane — Portfolio
 
-Welcome to the source code of my personal portfolio website. This project is a minimal, high-performance web application built with **Astro** and designed with a focus on aesthetics, speed, and modern web design principles (Glassmorphism, Micro-interactions).
+My personal site. Built with [Astro](https://astro.build/), styled with plain CSS, deployed on Vercel.
 
-<!-- ![Portfolio Preview](public/logos/ssc_logo.png) You might want to replace this with a screenshot of your site later -->*
+I kept it small on purpose. Ships almost no JavaScript, loads fast, and the whole thing is a handful of components.
 
-## ✨ Features
+## Stack
 
-- **⚡ Blazing Fast**: Built with [Astro](https://astro.build/) for 0kb JavaScript by default (mostly).
-- **🎨 Modern Design**: Custom Vanilla CSS with glassmorphism effects, smooth transitions, and a dark/light mode architecture.
-- **📱 Responsive**: Fully responsive layout that looks great on mobile, tablet, and desktop.
-- **🧩 Component-Based**: Modular architecture using Astro components (`Hero`, `Dock`, `Now`).
-- **🌊 Fluid Animations**: Intersection Observers for scroll-reveal animations and hover effects.
-- **🛠 Accessibility**: Semantic HTML structure and accessible color contrast.
+- **Astro 5** for the framework
+- **Vanilla CSS** with custom properties for theming and a dark/light toggle
+- **Vercel** for deploys
 
-## 🛠 Tech Stack
+## Running it locally
 
-- **Framework**: [Astro 5.0](https://astro.build/)
-- **Styling**: Vanilla CSS (Variables, Flexbox, Grid, Glassmorphism)
-- **Deployment**: Vercel
-- **Package Manager**: npm
+You'll need Node 18+ and npm.
 
-## 🚀 Getting Started
-
-To run this project locally, follow these steps:
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm
-
-### Installation
-
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/flash1729/Aditya_Portfolio.git
-    cd aditya_medhane
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Start the development server**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open your browser**
-    Visit `http://localhost:4321` to see the site live!
-
-## 📂 Project Structure
-
-```text
-/
-├── src/
-│   ├── components/    # UI Components (Hero, Dock, Now, etc.)
-│   ├── layouts/       # Main layout wrapper
-│   ├── pages/         # Route definitions (index.astro, life.astro)
-│   └── styles/        # Global CSS and variables
-├── public/            # Static assets (images, logos)
-└── astro.config.mjs   # Astro configuration
+```bash
+git clone https://github.com/flash1729/Aditya_Portfolio.git
+cd Aditya_Portfolio
+npm install
+npm run dev
 ```
 
-## 🚢 Deployment
+Then open `http://localhost:4321`.
 
-This project is optimized for deployment on **Vercel**.
+## Structure
 
-1.  Push your changes to GitHub.
-2.  Import the project in Vercel.
-3.  The framework preset "Astro" should be detected automatically.
-4.  Click **Deploy**!
+```text
+src/
+├── components/   # Hero, Dock, Now
+├── layouts/      # Layout wrapper
+├── pages/        # index.astro, life.astro
+└── styles/       # global.css
+public/           # images and logos
+```
 
-## 📄 License
+## License
 
-This project is valid for personal use and inspiration. Content (text, images, personal data) is © Aditya Medhane. Code is available under the MIT License.
-
----
-Built with ❤️ by [Aditya Medhane](https://x.com/Adi_flash1729)
+Code is MIT. The content (text, images, anything personal) is mine, so please don't lift that.

@@ -6,18 +6,18 @@ import Now from "../components/Now.astro";
 // Content for sections
 const experiences = [
     {
-        company: "AppCake",
-        role: "ios engineering intern | remote",
-        duration: "dec 2024 - june 2025",
-        desc: "built distributed sync engine with dropbox api, established ci/cd pipeline with 85% test coverage.",
-        link: "https://appcake.app",
-        logo: "/logos/appcake_logo.png",
+        company: "The C++ Alliance",
+        role: "student fellow | remote",
+        duration: "present",
+        desc: "working on clang's diagnostics, making the compiler catch more of what it currently lets through silently.",
+        link: "https://cppalliance.org",
+        logo: "C++",
     },
     {
         company: "OneBusAway iOS",
         role: "open source contributor | remote",
         duration: "jan 2024 - present",
-        desc: "engineered persistent bookmark storage, conducted code reviews, improved onboarding efficiency by 40%.",
+        desc: "added persistent bookmark storage, reviewed PRs, and helped tidy up the contributor onboarding.",
         link: "https://github.com/OneBusAway/onebusaway-ios",
         logo: "/logos/oba_logo.png",
     },
@@ -28,16 +28,24 @@ const projects = [
         title: "Lambda Calculus Interpreter",
         role: "swift, swiftui, c++",
         duration: "wwdc '25 winner",
-        desc: "high-performance interpreter with recursive descent parser, thread-safe evaluation engine, and context-aware error handling.",
+        desc: "a lambda calculus interpreter built around a recursive descent parser, with error messages that actually tell you what went wrong.",
         logo: "λ",
-        link: "#",
+        link: "https://github.com/flash1729/Lambda-Learner",
         badge: "🏆 wwdc winner",
+    },
+    {
+        title: "AI Studio Code Uploader",
+        role: "javascript, chrome extension",
+        duration: "chrome extension",
+        desc: "auto-renames code files to .txt on upload, so you can drop source straight into google ai studio without renaming everything by hand.",
+        logo: "📤",
+        link: "https://github.com/flash1729/ai-studio-code-uploader",
     },
     {
         title: "CodeSathi",
         role: "react, node.js, socket.io, mongodb",
         duration: "real-time collaborative code editor",
-        desc: "low-latency (<100ms) collaborative environment with google gemini api integration and mongodb-backed file system.",
+        desc: "a collaborative code editor with low-latency editing, a mongodb-backed file system, and gemini wired in for help while you code.",
         logo: "⚡",
         link: "#",
     },
@@ -52,13 +60,10 @@ const skills = [
     "react",
     "node.js",
     "docker",
-    "aws",
-    "mongodb",
     "xcode",
     "git",
     "system design",
     "compilers",
-    "tdd",
 ];
 ---
 
@@ -71,16 +76,17 @@ const skills = [
     <section class="about">
         <h2>about</h2>
         <p class="about-text">
-            tldr; wwdc '25 swift student challenge winner<br /><br />
-            i build high-performance interpreters, ios apps, and distributed systems.<br
-            />
-            passionate about solving complex challenges through object-oriented design
-            and algorithmic optimization.<br /><br />
-            currently pursuing b.tech in computer science at <a
+            compilers have always fascinated me. not just what they produce, but
+            how they work inside. there's something genuinely interesting about a
+            piece of software that understands other software.<br /><br />
+            i'm a cs undergrad at <a
                 href="https://www.iiitm.ac.in/"
                 target="_blank"
                 rel="noopener">iiitm gwalior</a
-            >.
+            >. i won the wwdc swift student challenge in 2025 for a lambda calculus
+            interpreter, and right now i'm deep in parsers, type systems, and how
+            clang talks to us through its diagnostics. on the side i build ios apps
+            and contribute to open source.
         </p>
     </section>
 
@@ -121,8 +127,11 @@ const skills = [
     <section class="projects">
         <h2>things i've built</h2>
         {
-            projects.map((proj) => (
-                <a href={proj.link} class="work-card project-card">
+            projects.map((proj) => {
+                const isLink = proj.link && proj.link !== "#";
+                const Tag = isLink ? "a" : "div";
+                return (
+                <Tag {...(isLink ? { href: proj.link } : {})} class="work-card project-card">
                     <div class="work-logo">
                         {proj.logo.includes(".") ? (
                             <img
@@ -143,8 +152,9 @@ const skills = [
                     {proj.badge && (
                         <span class="project-badge">{proj.badge}</span>
                     )}
-                </a>
-            ))
+                </Tag>
+                );
+            })
         }
     </section>
 
@@ -170,7 +180,7 @@ const skills = [
                 <p class="work-duration">2023 - 2027</p>
                 <p class="work-role">b.tech in computer science engineering</p>
                 <p class="work-desc">
-                    cgpa: 8.5/10 • data structures, algorithms, os, compilers,
+                    cgpa: 8/10 • data structures, algorithms, os, compilers,
                     distributed systems
                 </p>
             </div>
@@ -180,7 +190,7 @@ const skills = [
     <!-- Leadership Section -->
     <section class="leadership">
         <h2>leadership</h2>
-        <a href="#" class="work-card">
+        <div class="work-card">
             <div class="work-logo">
                 <img
                     src="/logos/gdg_logo.png"
@@ -194,12 +204,12 @@ const skills = [
                 <p class="work-duration">sep 2025 - present</p>
                 <p class="work-role">ios and open source lead</p>
                 <p class="work-desc">
-                    leading ios workshops, mentoring 50+ students, fostering
-                    open-source culture.
+                    i run the ios workshops and help students get into open
+                    source. mentored 50+ so far.
                 </p>
             </div>
-        </a>
-        <a href="#" class="work-card">
+        </div>
+        <div class="work-card">
             <div class="work-logo">
                 <img
                     src="/logos/ecell_logo.jpeg"
@@ -213,11 +223,10 @@ const skills = [
                 <p class="work-duration">dec 2024 - present</p>
                 <p class="work-role">operations executive</p>
                 <p class="work-desc">
-                    coordinating logistics and technical operations for
-                    300-person hackathons.
+                    handling logistics and tech ops for 300-person hackathons.
                 </p>
             </div>
-        </a>
+        </div>
     </section>
 
     <!-- Awards Section -->
