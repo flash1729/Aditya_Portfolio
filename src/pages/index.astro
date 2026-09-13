@@ -2,6 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Now from "../components/Now.astro";
+import { getCollection } from "astro:content";
+
+// newest post powers the "new post" notice at the top of the page
+const latestPost = (await getCollection("blog")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+)[0];
 
 // Content for sections
 const experiences = [
@@ -68,6 +74,26 @@ const skills = [
 ---
 
 <Layout title="Aditya Medhane">
+    {
+        latestPost && (
+            <a href={`/blog/${latestPost.id}`} class="new-post">
+                <span class="new-post-dot"></span>
+                <span class="new-post-label">new post</span>
+                <span class="new-post-title">{latestPost.data.title}</span>
+                <span class="new-post-arrow">→</span>
+            </a>
+        )
+    }
+
+    <a href="/hire" class="hire-banner">
+        <span class="hire-banner-dot"></span>
+        <span class="hire-banner-text">
+            <span class="hire-banner-label">// hiring for jan - jun 2027?</span>
+            <span>here's the case for hiring me</span>
+        </span>
+        <span class="hire-banner-arrow">→</span>
+    </a>
+
     <Hero />
 
     <Now />
@@ -274,6 +300,145 @@ const skills = [
         </p>
     </section>
 </Layout>
+
+<style>
+    .hire-banner {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 40px;
+        padding: 14px 18px;
+        border: 1px solid var(--accent-soft);
+        border-radius: 14px;
+        background: linear-gradient(
+            135deg,
+            var(--accent-soft) 0%,
+            var(--card-bg) 100%
+        );
+        color: var(--text-primary);
+        transition: var(--transition);
+    }
+
+    .hire-banner:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px -16px var(--accent-glow);
+        color: var(--text-primary);
+    }
+
+    .hire-banner-dot {
+        position: relative;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        flex-shrink: 0;
+    }
+
+    .hire-banner-dot::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: banner-pulse 2s infinite;
+    }
+
+    @keyframes banner-pulse {
+        0% { transform: scale(1); opacity: 0.8; }
+        70% { transform: scale(2.6); opacity: 0; }
+        100% { transform: scale(1); opacity: 0; }
+    }
+
+    .hire-banner-text {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 4px 12px;
+        flex: 1;
+        min-width: 0;
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+
+    .hire-banner-label {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: var(--accent);
+    }
+
+    .hire-banner-arrow {
+        font-family: var(--font-mono);
+        color: var(--accent);
+        transition: transform 0.3s ease;
+    }
+
+    .hire-banner:hover .hire-banner-arrow {
+        transform: translateX(4px);
+    }
+    /* latest-post notice */
+    .new-post {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+        padding: 8px 14px 8px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 100px;
+        background: var(--card-bg);
+        color: var(--text-primary);
+        font-size: 0.82rem;
+        max-width: 100%;
+        transition: var(--transition);
+    }
+    .new-post:hover {
+        border-color: var(--accent);
+        color: var(--text-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px -18px var(--accent-glow);
+    }
+    .new-post-dot {
+        position: relative;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+    }
+    .new-post-dot::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: var(--accent);
+        animation: banner-pulse 2s infinite;
+    }
+    .new-post-label {
+        font-family: var(--font-mono);
+        font-size: 0.66rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .new-post-title {
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .new-post-arrow {
+        font-family: var(--font-mono);
+        color: var(--accent);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+    .new-post:hover .new-post-arrow {
+        transform: translateX(4px);
+    }
+</style>
 
 <script>
     // Scroll Animation
