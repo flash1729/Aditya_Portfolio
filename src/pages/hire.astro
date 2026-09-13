@@ -1,0 +1,610 @@
+---
+// Final hire page. Full-width, fits one viewport, no scroll on desktop.
+// Standalone page, deliberately not using the site Layout.
+const EMAIL = "adityamedhane.dev@gmail.com";
+const MAILTO = `mailto:${EMAIL}?subject=${encodeURIComponent("Internship (Jan - Jun 2027)")}`;
+const RESUME = "https://drive.google.com/file/d/1_M8b8FQqtuxTmS8Eah1hst_UjUFiZrB9/view?usp=sharing";
+const LLVM_PRS = "https://github.com/llvm/llvm-project/pulls?q=is%3Apr+author%3Aflash1729";
+const OBA_PRS = "https://github.com/OneBusAway/onebusaway-ios/pulls?q=is%3Apr+author%3Aflash1729";
+
+const clangLeaves = ["Chrome", "Every iPhone app", "Android", "PlayStation", "Rust", "Swift", "The Linux kernel"];
+const iosLeaves = ["OneBusAway", "AppCake", "Lambda Learner"];
+const webLeaves = ["CodeSathi"];
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Aditya Medhane</title>
+        <meta
+            name="description"
+            content="I ship software. From apps to compilers. LLVM/Clang contributor, iOS developer, WWDC 2025 winner. Available Jan to Jun 2027."
+        />
+        <meta name="color-scheme" content="light" />
+        <meta name="theme-color" content="#f6f3ec" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta property="og:title" content="Aditya Medhane" />
+        <meta property="og:description" content="I ship software. From apps to compilers." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/pfp.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header class="nav">
+            <a href="/" class="brand"><span class="dot"></span>Aditya Medhane</a>
+            <div class="nav-right">
+                <span class="avail-pill"><span class="live"></span>available for internships · jan - jun 2027</span>
+                <a href={MAILTO} class="btn-ink">let's talk <span>→</span></a>
+            </div>
+        </header>
+
+        <main class="cols">
+
+            <!-- ================= LEFT ================= -->
+            <div class="col">
+                <section class="tile profile" style="--i:0; --f:1.2">
+                    <div class="profile-top">
+                        <div class="photo">
+                            <span class="blob"></span>
+                            <img src="/pfp.jpg" alt="Aditya Medhane" draggable="false" />
+                        </div>
+                        <h1>Aditya<br />Medhane</h1>
+                    </div>
+                    <div class="mono label">builder · student · open source</div>
+                    <p class="lede">I ship software. From apps to compilers.</p>
+                    <div class="mono muted small">final-year CSE @ IIITM Gwalior</div>
+                    <div class="profile-foot">
+                        <div class="icons">
+                            <a href="https://github.com/flash1729" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                                <svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/aditya-medhane" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href={MAILTO} aria-label="Email" title="Email">
+                                <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </a>
+                            <a href={RESUME} target="_blank" rel="noopener" aria-label="Resume" title="Resume">
+                                <svg viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </a>
+                        </div>
+                        <div class="hand">good software<br />compounds.<svg viewBox="0 0 120 12" preserveAspectRatio="none"><path d="M2 8 C 30 2, 60 12, 118 5" /></svg></div>
+                    </div>
+                </section>
+
+                <section class="tile exp" style="--i:3; --f:1.45">
+                    <h2 class="h">Experience snapshot</h2>
+                    <ol class="timeline">
+                        <li class="hot">
+                            <span class="tl-dot"></span>
+                            <span class="mono when">2026 - now</span>
+                            <div class="what">
+                                <b>Compiler Research Fellow</b>
+                                <span>CppAlliance @ Compiler Research</span>
+                                <span class="mono fine">35+ LLVM/Clang patches merged</span>
+                            </div>
+                        </li>
+                        <li class="hot">
+                            <span class="tl-dot"></span>
+                            <span class="mono when">2024 - 2025</span>
+                            <div class="what">
+                                <b>iOS Developer</b>
+                                <span>AppCake</span>
+                                <span class="mono fine">1,000+ users · 85% test coverage</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tl-dot"></span>
+                            <span class="mono when">2023 - 2027</span>
+                            <div class="what">
+                                <b>B.Tech CSE</b>
+                                <span>IIITM Gwalior</span>
+                                <span class="mono fine">DSA · OS · DBMS · Compilers</span>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="tile avail" style="--i:6; --f:0.95">
+                    <div class="avail-head">Available for</div>
+                    <div class="avail-big">Jan → Jun 2027</div>
+                    <div class="mono avail-sub">26 weeks · full-time internship · mandatory final-sem</div>
+                    <a class="btn-ink btn-wide" href={MAILTO}>let's work together <span>→</span></a>
+                </section>
+            </div>
+
+            <!-- ================= MIDDLE ================= -->
+            <div class="col">
+                <div class="stats" style="--f:0.85">
+                    <a class="tile stat" style="--i:1" href="https://leetcode.com/u/neuralBro/" target="_blank" rel="noopener">
+                        <div class="stat-head">
+                            <span class="wm"><span class="lc-mark">LC</span>LeetCode</span>
+                            <span class="badge">KNIGHT</span>
+                        </div>
+                        <div class="num hot-num"><span class="count" data-to="1903">0</span></div>
+                        <div class="mono sub">max contest rating</div>
+                        <div class="pill">top ~5% of contest programmers</div>
+                    </a>
+                    <a class="tile stat" style="--i:2" href="https://www.codechef.com/users/nanom4646k" target="_blank" rel="noopener">
+                        <div class="stat-head"><span class="wm">CodeChef</span><span class="badge badge-soft">4★</span></div>
+                        <div class="num"><span class="count" data-to="1918">0</span></div>
+                        <div class="mono sub">max rating · starters 211</div>
+                        <div class="pill pill-warm">#36 in global rated contest</div>
+                    </a>
+                    <a class="tile stat" style="--i:3" href="https://github.com/flash1729/Lambda-Learner" target="_blank" rel="noopener">
+                        <div class="stat-head">
+                            <span class="wm"><svg class="apple" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>WWDC 2025</span>
+                        </div>
+                        <div class="num win">WINNER</div>
+                        <div class="mono sub">Selected among top 350 students worldwide.</div>
+                        <div class="pill">Lambda Calculus Interpreter in Swift</div>
+                    </a>
+                </div>
+
+                <section class="tile graph-tile" style="--i:4; --f:1.95">
+                    <div class="graph-head">
+                        <h2 class="h"><span class="slash">/</span>where my code ends up</h2>
+                        <p class="graph-sub">Compilers, iOS, and the web. Different ends of the stack, all shipping to real people.</p>
+                    </div>
+
+                    <div class="graph" id="graph">
+                        <svg class="edges" id="edges" aria-hidden="true"></svg>
+
+                        <div class="g-col g-col-src">
+                            <div class="g-src"><span class="prompt">&gt;_</span> my code</div>
+                        </div>
+
+                        <div class="g-col g-col-hubs">
+                            <a class="g-hub" data-hub="clang" href={LLVM_PRS} target="_blank" rel="noopener">
+                                <svg class="hub-ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+                                <div>
+                                    <b>LLVM / Clang</b>
+                                    <span class="mono hot-t"><i class="count" data-to="35">0</i>+ patches merged</span>
+                                    <span class="mono fine">Diagnostics · Sema · Toolchain</span>
+                                </div>
+                            </a>
+                            <div class="g-hub" data-hub="ios">
+                                <svg class="hub-ico" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                                <div>
+                                    <b>iOS</b>
+                                    <span class="mono hot-t"><i>3</i> shipped apps</span>
+                                    <span class="mono fine">SwiftUI · MapKit · Cloud Sync</span>
+                                </div>
+                            </div>
+                            <div class="g-hub" data-hub="web">
+                                <svg class="hub-ico" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                <div>
+                                    <b>Web</b>
+                                    <span class="mono hot-t">real-time collab editor</span>
+                                    <span class="mono fine">React · Node.js · Socket.IO</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="g-col g-col-leaves">
+                            {clangLeaves.map((l) => <span class="g-leaf" data-hub="clang">{l}</span>)}
+                            {iosLeaves.map((l) => <span class="g-leaf" data-hub="ios">{l}</span>)}
+                            {webLeaves.map((l) => <span class="g-leaf" data-hub="web">{l}</span>)}
+                        </div>
+                    </div>
+
+                    <div class="gstats">
+                        <div class="gstat"><b>10M+</b><span class="mono fine">lines of code in LLVM &amp; Clang</span></div>
+                        <div class="gstat"><b>2B+</b><span class="mono fine">devices run software it builds</span></div>
+                        <div class="gstat"><b>every</b><span class="mono fine">Clang user gets a warning I turned on</span></div>
+                    </div>
+                </section>
+
+                <section class="tile quote" style="--i:8; --f:0.62">
+                    <div class="quote-main">
+                        <p>I like working at the layer where software stops being theoretical.</p>
+                        <span class="rule"></span>
+                    </div>
+                    <p class="quote-side">Compilers, systems, and real products. I enjoy turning complex ideas into tools that people actually use.</p>
+                </section>
+            </div>
+
+            <!-- ================= RIGHT ================= -->
+            <div class="col">
+                <section class="tile card" style="--i:2; --f:1.0">
+                    <h2 class="h">Open Source</h2>
+                    <div class="repos">
+                        <a class="repo" href={OBA_PRS} target="_blank" rel="noopener">
+                            <span class="ico ico-green"><svg viewBox="0 0 24 24"><path d="M8 6v6M16 6v6M2 12h19.6M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+                            <div>
+                                <b>OneBusAway iOS</b>
+                                <span class="mono fine">7 merged PRs · public transit app</span>
+                            </div>
+                        </a>
+                        <a class="repo" href={LLVM_PRS} target="_blank" rel="noopener">
+                            <span class="ico ico-ink"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></span>
+                            <div>
+                                <b>llvm-project</b>
+                                <span class="mono fine">35+ merged patches · Clang</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <a class="tile card feat" style="--i:5; --f:1.25" href="https://github.com/flash1729/Lambda-Learner" target="_blank" rel="noopener">
+                    <h2 class="h">Featured Project</h2>
+                    <div class="feat-body">
+                        <div class="repo repo-static">
+                            <span class="ico ico-ink lam">λ</span>
+                            <div>
+                                <b>Lambda Calculus Interpreter</b>
+                                <span class="mono hot-t">WWDC 2025 Winner</span>
+                            </div>
+                        </div>
+                        <p class="feat-desc">A complete interpreter for the untyped lambda calculus, written in Swift and shipped as an iPhone app with a live REPL.</p>
+                        <ul class="bul">
+                            <li>Lexer → Parser → Resolver → Reducer</li>
+                            <li>Church-encoded standard library</li>
+                            <li>Detects non-terminating patterns</li>
+                            <li>Live REPL in a SwiftUI app</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <section class="tile dark now" style="--i:7; --f:0.75">
+                    <div class="mono label label-dim">currently</div>
+                    <p>Building, learning, and looking for what's next.</p>
+                    <span class="rule rule-hot"></span>
+                </section>
+            </div>
+        </main>
+
+        <style is:global>
+            :root {
+                --bg: #f6f3ec;
+                --tile: #ffffff;
+                --tile-2: #fbf9f4;
+                --line: #e7e2d7;
+                --line-2: #d6d0c3;
+                --ink: #141414;
+                --ink-2: #4b4842;
+                --muted: #8b867c;
+                --hot: #f4511e;
+                --hot-soft: #fdeee7;
+                --green: #22c55e;
+                --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+                --mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+                --hand: "Caveat", cursive;
+                --spring: cubic-bezier(0.34, 1.3, 0.64, 1);
+                --ease: cubic-bezier(0.22, 1, 0.36, 1);
+                --r: 18px;
+                --gap: 12px;
+            }
+
+            *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+            html, body { height: 100%; }
+            body {
+                font-family: var(--sans); background: var(--bg); color: var(--ink);
+                -webkit-font-smoothing: antialiased;
+                height: 100dvh; display: flex; flex-direction: column; overflow: hidden;
+            }
+            a { color: inherit; text-decoration: none; }
+            ::selection { background: var(--hot); color: #fff; }
+
+            .mono { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.02em; }
+            .label { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.62rem; color: var(--muted); }
+            .muted { color: var(--muted); }
+            .small { font-size: 0.66rem; }
+            .fine { font-size: 0.62rem; color: var(--muted); }
+            .hot-t { color: var(--hot); font-weight: 700; }
+            .h { font-size: clamp(0.95rem, 4.6cqi, 1.15rem); font-weight: 700; letter-spacing: -0.02em; }
+            .slash { color: var(--hot); margin-right: 8px; font-weight: 600; }
+            .rule { display: block; width: 28px; height: 3px; background: var(--ink); border-radius: 2px; margin-top: 12px; }
+            .rule-hot { background: var(--hot); }
+
+            /* ===== nav ===== */
+            .nav {
+                flex: none; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+                padding: 12px 20px;
+            }
+            .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.02rem; letter-spacing: -0.02em; }
+            .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--hot); }
+            .nav-right { display: flex; align-items: center; gap: 10px; }
+            .avail-pill {
+                display: inline-flex; align-items: center; gap: 8px;
+                font-size: 0.72rem; color: var(--ink-2);
+                padding: 8px 14px; border-radius: 100px; background: var(--tile); border: 1px solid var(--line);
+            }
+            .live { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: ping 1.8s infinite; }
+            @keyframes ping { 70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+            .btn-ink {
+                display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+                background: var(--ink); color: #fff; font-weight: 600; font-size: 0.86rem;
+                padding: 10px 18px; border-radius: 100px;
+                transition: transform 0.25s var(--spring), background 0.25s var(--ease), box-shadow 0.25s var(--ease);
+            }
+            .btn-ink:hover { transform: translateY(-2px); background: #000; box-shadow: 0 14px 30px -16px rgba(0, 0, 0, 0.6); }
+            .btn-ink span { transition: transform 0.25s var(--ease); }
+            .btn-ink:hover span { transform: translateX(4px); }
+            .btn-wide { width: 100%; margin-top: auto; padding: clamp(9px, 2.6cqh, 13px) 16px; }
+
+            /* ===== layout: fills the viewport, nothing scrolls ===== */
+            .cols {
+                flex: 1; min-height: 0;
+                display: grid; grid-template-columns: 3fr 6fr 3fr; gap: var(--gap);
+                padding: 0 20px 16px;
+            }
+            .col { display: flex; flex-direction: column; gap: var(--gap); min-height: 0; min-width: 0; }
+            .stats { flex: var(--f, 1) 1 0; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+            .stats .tile { flex: none; height: 100%; }
+
+            /* ===== tile base ===== */
+            .tile {
+                position: relative; display: flex; flex-direction: column;
+                flex: var(--f, 1) 1 0; min-height: 0;
+                background: var(--tile); border: 1px solid var(--line); border-radius: var(--r);
+                padding: clamp(14px, 4.2cqi, 22px); overflow: hidden;
+                container-type: size;
+                transition: transform 0.35s var(--spring), border-color 0.3s var(--ease), box-shadow 0.35s var(--ease);
+                animation: rise 0.7s var(--spring) both; animation-delay: calc(var(--i) * 60ms + 60ms);
+            }
+            .tile:hover { border-color: var(--line-2); transform: translateY(-2px); box-shadow: 0 24px 46px -30px rgba(20, 20, 20, 0.35); }
+            a.tile:hover { border-color: var(--ink); }
+            @keyframes rise { from { opacity: 0; transform: translateY(12px) scale(0.985); } to { opacity: 1; transform: none; } }
+
+            /* ===== profile ===== */
+            .profile { background: var(--tile-2); }
+            .profile-top { display: flex; align-items: center; gap: 14px; min-width: 0; }
+            .photo { position: relative; width: clamp(64px, 22cqi, 96px); height: clamp(64px, 22cqi, 96px); flex-shrink: 0; }
+            .blob { position: absolute; inset: -6px -9px 5px -6px; border-radius: 46% 54% 60% 40% / 50% 40% 60% 50%; background: var(--hot); opacity: 0.85; transform: rotate(-8deg); }
+            .photo img { position: relative; width: 100%; height: 100%; object-fit: cover; border-radius: 40% 60% 55% 45% / 55% 45% 55% 45%; }
+            .profile h1 { min-width: 0; font-size: clamp(1.3rem, 8.2cqi, 2.1rem); font-weight: 800; letter-spacing: -0.045em; line-height: 0.98; overflow-wrap: anywhere; }
+            .profile .label { margin-top: clamp(8px, 3cqh, 16px); color: var(--ink-2); }
+            .lede { margin-top: 8px; font-size: clamp(0.86rem, 3.6cqi, 1.02rem); font-weight: 500; letter-spacing: -0.01em; line-height: 1.3; }
+            .profile .small { margin-top: 5px; }
+            .profile-foot { margin-top: auto; padding-top: 8px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+            .icons { display: flex; gap: 12px; }
+            .icons a { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; color: var(--ink); transition: color 0.25s var(--ease), transform 0.25s var(--spring); }
+            .icons a:hover { color: var(--hot); transform: translateY(-2px); }
+            .icons svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+            .hand { position: relative; font-family: var(--hand); font-size: clamp(1rem, 4.6cqi, 1.3rem); line-height: 0.95; color: var(--ink); transform: rotate(-9deg); text-align: center; padding-bottom: 8px; }
+            .hand svg { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 10px; }
+            .hand path { fill: none; stroke: var(--hot); stroke-width: 2.5; stroke-linecap: round; }
+
+            /* ===== experience ===== */
+            .timeline { list-style: none; margin-top: clamp(10px, 3.5cqh, 18px); position: relative; display: flex; flex-direction: column; justify-content: space-between; flex: 1; min-height: 0; gap: 8px; padding-left: 18px; }
+            .timeline::before { content: ""; position: absolute; left: 4px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+            .timeline li { position: relative; display: grid; grid-template-columns: minmax(64px, 26cqi) 1fr; gap: 8px; align-items: start; }
+            .tl-dot { position: absolute; left: -18px; top: 3px; width: 10px; height: 10px; border-radius: 50%; background: var(--line-2); }
+            .timeline li.hot .tl-dot { background: var(--hot); }
+            .when { color: var(--muted); padding-top: 2px; font-size: 0.62rem; }
+            .what { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+            .what b { font-size: clamp(0.78rem, 3.3cqi, 0.9rem); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+            .what > span { font-size: clamp(0.68rem, 2.9cqi, 0.78rem); color: var(--ink-2); }
+            .what .fine { color: var(--muted); }
+
+            /* ===== available ===== */
+            .avail { background: var(--hot); border-color: var(--hot); color: var(--ink); }
+            .avail:hover { border-color: var(--hot); }
+            .avail-head { font-weight: 600; font-size: clamp(0.85rem, 3.8cqi, 1rem); }
+            .avail-big { margin-top: 6px; font-size: clamp(1.5rem, 9.5cqi, 2.6rem); font-weight: 800; letter-spacing: -0.05em; line-height: 0.95; }
+            .avail-sub { margin-top: 8px; color: rgba(20, 20, 20, 0.85); line-height: 1.45; font-size: 0.62rem; }
+
+            /* ===== stats ===== */
+            .stat { padding: clamp(12px, 6cqi, 18px); }
+            .stat-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+            .wm { display: inline-flex; align-items: center; gap: 7px; font-weight: 700; font-size: clamp(0.8rem, 5cqi, 0.95rem); letter-spacing: -0.01em; white-space: nowrap; }
+            .lc-mark { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 5px; background: var(--hot); color: #fff; font-family: var(--mono); font-size: 0.56rem; font-weight: 700; }
+            .apple { width: 16px; height: 16px; fill: var(--ink); }
+            .badge { font-family: var(--mono); font-size: 0.56rem; font-weight: 700; letter-spacing: 0.12em; padding: 3px 8px; border-radius: 100px; background: #ffe0b8; color: #7a3d00; white-space: nowrap; }
+            .badge-soft { background: var(--hot-soft); color: var(--hot); }
+            .num { margin-top: auto; font-size: clamp(1.7rem, 17cqi, 3.4rem); font-weight: 800; letter-spacing: -0.06em; line-height: 0.9; white-space: nowrap; }
+            .hot-num { color: var(--hot); }
+            .win { font-size: clamp(1.5rem, 15cqi, 3rem); letter-spacing: -0.05em; }
+            .sub { margin-top: 8px; color: var(--ink-2); font-size: 0.64rem; line-height: 1.4; }
+            .pill { margin-top: 8px; align-self: flex-start; font-size: clamp(0.6rem, 3.4cqi, 0.72rem); font-weight: 600; padding: 5px 10px; border-radius: 9px; border: 1px solid var(--line); background: var(--tile-2); }
+            .pill-warm { background: #fff3d6; border-color: #f4dfb0; color: #6a3d00; }
+
+            /* ===== graph tile ===== */
+            .graph-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 46%); gap: 20px; align-items: start; }
+            .graph-sub { font-size: clamp(0.7rem, 1.6cqi, 0.82rem); color: var(--ink-2); line-height: 1.45; text-align: right; }
+
+            .graph {
+                position: relative; flex: 1; min-height: 0; margin-top: clamp(10px, 3cqh, 20px);
+                display: grid; grid-template-columns: 0.7fr 1.5fr 1fr; align-items: center; gap: 0 20px;
+            }
+            .edges { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+            .edge { fill: none; stroke: var(--hot); stroke-width: 1.4; stroke-dasharray: 2 4; stroke-linecap: round; opacity: 0.8; transition: opacity 0.3s var(--ease); }
+            .g-col { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; min-height: 0; }
+            .g-col-hubs { gap: clamp(8px, 2.4cqh, 16px); }
+            .g-col-leaves { gap: clamp(3px, 1cqh, 6px); }
+
+            .g-src { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--ink); color: #fff; font-family: var(--mono); font-size: 0.7rem; padding: 11px 16px; border-radius: 100px; }
+            .prompt { color: var(--hot); font-weight: 700; }
+
+            .g-hub {
+                display: flex; align-items: flex-start; gap: 10px;
+                padding: clamp(8px, 2.2cqh, 13px) 14px; border-radius: 14px;
+                background: var(--tile-2); border: 1px solid var(--line);
+                transition: border-color 0.25s var(--ease), transform 0.25s var(--spring), opacity 0.3s var(--ease);
+            }
+            .g-hub:hover { border-color: var(--ink); transform: translateX(2px); }
+            .hub-ico { width: 26px; height: 26px; flex-shrink: 0; fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: var(--ink); margin-top: 1px; }
+            .g-hub div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+            .g-hub b { font-size: clamp(0.82rem, 1.8cqi, 0.98rem); font-weight: 700; letter-spacing: -0.02em; }
+            .g-hub i { font-style: normal; }
+            .g-hub .mono { font-size: 0.64rem; }
+            .g-hub .fine { font-size: 0.58rem; }
+            .g-leaf {
+                align-self: flex-start; font-family: var(--mono); font-size: 0.64rem;
+                padding: 4px 9px; border-radius: 100px;
+                background: var(--tile); border: 1px solid var(--line-2); color: var(--ink);
+                transition: opacity 0.3s var(--ease), border-color 0.3s var(--ease);
+            }
+            .g-leaf[data-hub="ios"] { border-style: dashed; }
+            .g-leaf[data-hub="web"] { border-style: dotted; }
+
+            .graph[data-focus="clang"] :is(.g-leaf, .g-hub, .edge):not([data-hub="clang"]),
+            .graph[data-focus="ios"]   :is(.g-leaf, .g-hub, .edge):not([data-hub="ios"]),
+            .graph[data-focus="web"]   :is(.g-leaf, .g-hub, .edge):not([data-hub="web"]) { opacity: 0.18; }
+            .graph[data-focus="clang"] .g-leaf[data-hub="clang"],
+            .graph[data-focus="ios"]   .g-leaf[data-hub="ios"],
+            .graph[data-focus="web"]   .g-leaf[data-hub="web"] { border-color: var(--hot); }
+
+            .gstats {
+                margin-top: clamp(8px, 2.4cqh, 16px); padding-top: clamp(8px, 2cqh, 14px);
+                border-top: 1px dashed var(--line-2);
+                display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+            }
+            .gstat { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+            .gstat b { font-size: clamp(1rem, 2.6cqi, 1.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+            .gstat .fine { font-size: 0.6rem; line-height: 1.35; }
+
+            /* ===== quote ===== */
+            .quote { background: var(--hot-soft); border-color: #f6ddd0; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 24px; align-items: center; }
+            .quote-main p { font-size: clamp(0.95rem, 3cqi, 1.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
+            .quote-main .rule { margin-top: 8px; }
+            .quote-side { font-size: clamp(0.7rem, 1.6cqi, 0.84rem); color: var(--ink-2); line-height: 1.5; border-left: 1px solid #ecd2c4; padding-left: 20px; }
+
+            /* ===== right column ===== */
+            .repos { margin-top: auto; display: flex; flex-direction: column; justify-content: space-evenly; flex: 1; min-height: 0; gap: 8px; padding-top: 8px; }
+            .repo { display: flex; gap: 12px; align-items: center; padding: 8px 10px; margin: 0 -10px; border-radius: 12px; transition: background 0.25s var(--ease); }
+            a.repo:hover { background: var(--tile-2); }
+            .repo-static { margin-top: 12px; padding: 0; margin-left: 0; margin-right: 0; }
+            .repo div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+            .repo b { font-size: clamp(0.82rem, 3.6cqi, 0.98rem); font-weight: 700; letter-spacing: -0.02em; }
+            .ico { display: inline-flex; align-items: center; justify-content: center; width: clamp(36px, 10cqi, 44px); height: clamp(36px, 10cqi, 44px); border-radius: 12px; flex-shrink: 0; }
+            .ico svg { width: 55%; height: 55%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+            .ico-green { background: #8bd48e; color: #103d14; }
+            .ico-ink { background: var(--ink); color: #fff; }
+            .lam { font-family: var(--mono); font-size: 1.3rem; font-weight: 700; }
+            .bul { list-style: none; margin-top: auto; padding-top: 10px; display: flex; flex-direction: column; gap: clamp(2px, 1cqh, 6px); font-size: clamp(0.68rem, 3cqi, 0.8rem); color: var(--ink-2); padding-left: 14px; }
+            .bul li::before { content: "•"; color: var(--ink); margin-left: -14px; margin-right: 8px; }
+
+            .feat-body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-evenly; gap: clamp(6px, 1.5cqh, 14px); padding-top: 6px; }
+            .feat .repo-static { margin-top: 0; }
+            .feat-desc { font-size: clamp(0.7rem, 3.1cqi, 0.84rem); color: var(--ink-2); line-height: 1.5; }
+            .feat .bul { margin-top: 0; padding-top: 0; gap: clamp(3px, 1.6cqh, 10px); }
+
+            .dark { background: var(--ink); border-color: var(--ink); color: #fff; }
+            .dark:hover { border-color: var(--ink); }
+            .now p { margin-top: auto; font-size: clamp(1rem, 5.6cqi, 1.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; }
+            .label-dim { color: rgba(255, 255, 255, 0.55); }
+
+            /* ===== smaller screens: let it scroll ===== */
+            @media (max-width: 1100px) {
+                body { height: auto; overflow: auto; }
+                .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); flex: none; }
+                .col { display: contents; }
+                .tile, .stats { flex: none; container-type: inline-size; min-height: 170px; }
+                .stats, .graph-tile, .quote { grid-column: 1 / -1; }
+                .graph-tile { min-height: 420px; }
+                .graph-head { grid-template-columns: 1fr; }
+                .graph-sub { text-align: left; }
+                .timeline { justify-content: flex-start; gap: 14px; }
+                .avail-pill { display: none; }
+            }
+            @media (max-width: 720px) {
+                .cols { grid-template-columns: 1fr; padding: 0 14px 18px; }
+                .stats { grid-template-columns: 1fr; }
+                .edges { display: none; }
+                .graph { grid-template-columns: 1fr; gap: 14px; }
+                .g-col-leaves { flex-direction: row; flex-wrap: wrap; }
+                .quote { grid-template-columns: 1fr; }
+                .quote-side { border-left: 0; padding-left: 0; }
+            }
+            @media (prefers-reduced-motion: reduce) {
+                .tile { animation: none; transition: none; }
+                .live { animation: none; }
+            }
+        </style>
+
+        <script>
+            const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            // ---- count-up ----
+            const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+            document.querySelectorAll<HTMLElement>(".count").forEach((el, i) => {
+                const to = Number(el.dataset.to ?? 0);
+                if (reduce) { el.textContent = String(to); return; }
+                setTimeout(() => {
+                    const start = performance.now();
+                    const tick = (now: number) => {
+                        const p = Math.min(1, (now - start) / 1300);
+                        el.textContent = String(Math.round(to * easeOut(p)));
+                        if (p < 1) requestAnimationFrame(tick);
+                    };
+                    requestAnimationFrame(tick);
+                }, 240 + i * 60);
+            });
+
+            // ---- graph edges from real node positions ----
+            const graph = document.getElementById("graph");
+            const svg = document.getElementById("edges") as unknown as SVGSVGElement | null;
+
+            function mk(name: string, attrs: Record<string, string>) {
+                const el = document.createElementNS("http://www.w3.org/2000/svg", name);
+                for (const k in attrs) el.setAttribute(k, attrs[k]);
+                return el;
+            }
+            function anchor(el: Element, side: "l" | "r", box: DOMRect) {
+                const r = el.getBoundingClientRect();
+                return { x: (side === "r" ? r.right : r.left) - box.left, y: r.top - box.top + r.height / 2 };
+            }
+
+            let drawn = false;
+            function draw() {
+                if (!graph || !svg) return;
+                if (getComputedStyle(svg).display === "none") return;
+                const box = graph.getBoundingClientRect();
+                svg.setAttribute("viewBox", `0 0 ${box.width} ${box.height}`);
+                svg.innerHTML = "";
+
+                const src = graph.querySelector(".g-src");
+                if (!src) return;
+                const hubs = Array.from(graph.querySelectorAll<HTMLElement>(".g-hub"));
+                const segs: { a: { x: number; y: number }; b: { x: number; y: number }; hub: string }[] = [];
+
+                hubs.forEach((hub) => {
+                    const id = hub.dataset.hub ?? "";
+                    segs.push({ a: anchor(src, "r", box), b: anchor(hub, "l", box), hub: id });
+                    graph.querySelectorAll(`.g-leaf[data-hub="${id}"]`).forEach((leaf) => {
+                        segs.push({ a: anchor(hub, "r", box), b: anchor(leaf, "l", box), hub: id });
+                    });
+                });
+
+                segs.forEach((s, i) => {
+                    const mx = (s.a.x + s.b.x) / 2;
+                    const d = `M ${s.a.x} ${s.a.y} C ${mx} ${s.a.y}, ${mx} ${s.b.y}, ${s.b.x} ${s.b.y}`;
+                    const p = mk("path", { d, class: "edge", "data-hub": s.hub }) as SVGPathElement;
+                    svg.appendChild(p);
+                    if (!drawn && !reduce) {
+                        const len = p.getTotalLength();
+                        p.style.strokeDasharray = `${len}`;
+                        p.style.strokeDashoffset = `${len}`;
+                        p.style.transition = `stroke-dashoffset 0.9s cubic-bezier(0.22,1,0.36,1) ${420 + i * 40}ms`;
+                        requestAnimationFrame(() => requestAnimationFrame(() => {
+                            p.style.strokeDashoffset = "0";
+                            p.addEventListener("transitionend", () => { p.style.strokeDasharray = ""; p.style.strokeDashoffset = ""; p.style.transition = ""; }, { once: true });
+                        }));
+                    }
+                });
+                drawn = true;
+            }
+
+            if (graph && svg) {
+                const go = () => { draw(); new ResizeObserver(() => draw()).observe(graph); };
+                if ((document as any).fonts?.ready) (document as any).fonts.ready.then(go); else go();
+                graph.querySelectorAll<HTMLElement>(".g-hub").forEach((hub) => {
+                    hub.addEventListener("pointerenter", () => { graph.dataset.focus = hub.dataset.hub ?? ""; });
+                    hub.addEventListener("pointerleave", () => { delete graph.dataset.focus; });
+                });
+            }
+        </script>
+    </body>
+</html>
